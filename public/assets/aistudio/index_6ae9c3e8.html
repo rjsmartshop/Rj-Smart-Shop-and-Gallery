@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="bn" data-lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RJ SMART SHOP & GALLERY | Premium Smartphones, Gadgets & Accessories</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Hind Siliguri for Bangla -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Brand Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       ধাপ ২: TOP ANNOUNCEMENT BAR (Bilingual BN & EN)
+       ===================================================================== -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="#outlets" class="topbar-link">
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="i18n" data-en="Our Showrooms" data-bn="আমাদের আউটলেটসমূহ">আমাদের আউটলেটসমূহ</span>
+        </a>
+        <a href="#exchange" class="topbar-link">
+          <span class="exchange-pill">
+            <i class="fa-solid fa-repeat"></i>
+            <span class="i18n" data-en="Exchange Offer" data-bn="এক্সচেঞ্জ অফার">এক্সচেঞ্জ অফার</span>
+          </span>
+          <span class="i18n" data-en="Upgrade your old phone today!" data-bn="পুরনো ফোন দিয়ে নতুন ফোন নিন!">পুরনো ফোন দিয়ে নতুন ফোন নিন!</span>
+        </a>
+      </div>
+      
+      <div class="topbar-right">
+        <!-- Hotline -->
+        <a href="tel:+8801700000000" class="topbar-link">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span><span class="i18n" data-en="Hotline: " data-bn="হটলাইন: ">হটলাইন: </span><strong>+880 1700-000000</strong></span>
+        </a>
+        
+        <!-- Track Order -->
+        <a href="#track-order" class="topbar-link">
+          <i class="fa-solid fa-truck-fast"></i>
+          <span class="i18n" data-en="Track Order" data-bn="অর্ডার ট্র্যাক করুন">অর্ডার ট্র্যাক করুন</span>
+        </a>
+
+        <!-- Bilingual Language Switcher Toggle -->
+        <div class="lang-switch-wrap" role="group" aria-label="Language Switcher">
+          <button type="button" class="lang-btn active" id="langBtnBn" data-lang-choice="bn">
+            <span>🇧🇩 বাংলা</span>
+          </button>
+          <button type="button" class="lang-btn" id="langBtnEn" data-lang-choice="en">
+            <span>🇬🇧 English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       ধাপ ২: MAIN HEADER (Logo, Search, Cart, Wishlist, Account)
+       ===================================================================== -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-row">
+        
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Open Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Brand Logo & Name -->
+        <a href="index.html" class="brand-logo-link">
+          <img src="assets/logo.png" alt="RJ SMART SHOP & GALLERY Logo" class="brand-logo-img">
+          <div class="brand-title-wrap">
+            <span class="brand-title">RJ SMART SHOP</span>
+            <span class="brand-subtitle">& GALLERY</span>
+          </div>
+        </a>
+
+        <!-- Search Bar with Category Filter (Dazzle style) -->
+        <div class="header-search">
+          <form class="search-form" id="searchForm">
+            <select class="search-category-select" id="searchCategory">
+              <option value="all" class="i18n" data-en="All Categories" data-bn="সকল ক্যাটাগরি">সকল ক্যাটাগরি</option>
+              <option value="iphone">Apple / iPhone</option>
+              <option value="phone" class="i18n" data-en="Smartphones" data-bn="স্মার্টফোন">স্মার্টফোন</option>
+              <option value="watch" class="i18n" data-en="Smart Watch" data-bn="স্মার্টওয়াচ">স্মার্টওয়াচ</option>
+              <option value="audio" class="i18n" data-en="AirPods & Audio" data-bn="এয়ারপডস ও অডিও">এয়ারপডস ও অডিও</option>
+              <option value="accessories" class="i18n" data-en="Accessories" data-bn="এক্সেসরিজ">এক্সেসরিজ</option>
+            </select>
+            <input type="text" class="search-input" id="searchInput" 
+                   data-placeholder-bn="স্মার্টফোন বা গ্যাজেটের নাম লিখুন (যেমন: iPhone 16 Pro, S24 Ultra)..."
+                   data-placeholder-en="Search smartphones or gadgets (e.g. iPhone 16 Pro, S24 Ultra)..."
+                   placeholder="স্মার্টফোন বা গ্যাজেটের নাম লিখুন (যেমন: iPhone 16 Pro, S24 Ultra)..." 
+                   autocomplete="off">
+            <button type="submit" class="search-btn" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Action Items (Wishlist, Cart, Account, Mobile Lang Toggle) -->
+        <div class="header-actions">
+          
+          <!-- Mobile Language Switcher (Visible on mobile screens) -->
+          <button class="action-btn mobile-lang-toggle" id="mobileLangToggle" style="display:none;" title="Switch Language">
+            <i class="fa-solid fa-globe" style="color:var(--rj-gold);"></i>
+            <span id="mobileLangText" style="font-size:0.75rem; font-weight:700;">EN</span>
+          </button>
+
+          <!-- Wishlist -->
+          <a href="#wishlist" class="action-btn" title="উইশলিস্ট">
+            <div class="action-icon-wrap">
+              <i class="fa-regular fa-heart"></i>
+              <span class="badge-count" id="wishlistCount">0</span>
+            </div>
+            <div class="action-text">
+              <span class="action-label i18n" data-en="Wishlist" data-bn="পছন্দ তালিকা">পছন্দ তালিকা</span>
+              <span class="action-value i18n" data-en="Saved" data-bn="উইশলিস্ট">উইশলিস্ট</span>
+            </div>
+          </a>
+
+          <!-- Cart Drawer Trigger -->
+          <button class="action-btn" id="cartDrawerBtn" title="শপিং কার্ট">
+            <div class="action-icon-wrap">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span class="badge-count" id="cartCount">0</span>
+            </div>
+            <div class="action-text">
+              <span class="action-label i18n" data-en="My Cart" data-bn="আমার কার্ট">আমার কার্ট</span>
+              <span class="action-value" id="cartTotalHeader">৳ 0</span>
+            </div>
+          </button>
+
+          <!-- User Account -->
+          <a href="#account" class="action-btn" title="আমার অ্যাকাউন্ট">
+            <div class="action-icon-wrap">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="action-text">
+              <span class="action-label i18n" data-en="Account" data-bn="প্রোফাইল">প্রোফাইল</span>
+              <span class="action-value i18n" data-en="Sign In" data-bn="লগইন">লগইন</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       ধাপ ২: MAIN NAVIGATION BAR (Mega Menus & Quick Links)
+       ===================================================================== -->
+  <nav class="main-navbar">
+    <div class="container">
+      <div class="nav-row">
+        
+        <!-- Category Dropdown Trigger -->
+        <div class="category-dropdown-wrap">
+          <button class="category-dropdown-btn" id="categoriesMenuBtn">
+            <i class="fa-solid fa-bars-staggered"></i>
+            <span class="i18n" data-en="All Categories" data-bn="সকল ক্যাটাগরি">সকল ক্যাটাগরি</span>
+            <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 5px;"></i>
+          </button>
+        </div>
+
+        <!-- Main Nav Links -->
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="nav-link active">
+              <i class="fa-solid fa-house"></i> 
+              <span class="i18n" data-en="Home" data-bn="হোম">হোম</span>
+            </a>
+          </li>
+          <li>
+            <a href="#apple-zone" class="nav-link">
+              <i class="fa-brands fa-apple"></i> 
+              <span>Apple Zone</span>
+            </a>
+          </li>
+          <li>
+            <a href="#smartphones" class="nav-link">
+              <i class="fa-solid fa-mobile-screen-button"></i> 
+              <span class="i18n" data-en="Smartphones" data-bn="স্মার্টফোন">স্মার্টফোন</span>
+            </a>
+          </li>
+          <li>
+            <a href="#smartwatches" class="nav-link">
+              <i class="fa-regular fa-clock"></i> 
+              <span class="i18n" data-en="Smart Watch" data-bn="স্মার্টওয়াচ">স্মার্টওয়াচ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#audio" class="nav-link">
+              <i class="fa-solid fa-headphones"></i> 
+              <span class="i18n" data-en="Audio & Sound" data-bn="অডিও ও সাউন্ড">অডিও ও সাউন্ড</span>
+            </a>
+          </li>
+          <li>
+            <a href="#accessories" class="nav-link">
+              <i class="fa-solid fa-plug"></i> 
+              <span class="i18n" data-en="Accessories" data-bn="এক্সেসরিজ">এক্সেসরিজ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#exchange" class="nav-link">
+              <i class="fa-solid fa-repeat"></i> 
+              <span class="i18n" data-en="Exchange" data-bn="এক্সচেঞ্জ অফার">এক্সচেঞ্জ অফার</span> 
+              <span class="nav-badge">NEW</span>
+            </a>
+          </li>
+          <li>
+            <a href="#hot-deals" class="nav-link hot-deal">
+              <i class="fa-solid fa-fire"></i> 
+              <span class="i18n" data-en="Hot Deals" data-bn="হট ডিলস">হট ডিলস</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Hotline Call Support -->
+        <div class="nav-right-call">
+          <i class="fa-solid fa-headset"></i>
+          <span><span class="i18n" data-en="Support: " data-bn="সাপোর্ট: ">সাপোর্ট: </span>01700-000000</span>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- =====================================================================
+       ধাপ ৩: HERO SECTION & BANNER SLIDER (Dazzle Style)
+       ===================================================================== -->
+  <main id="mainContent">
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Main Hero Slider (Left 2.2 cols) -->
+          <div class="hero-slider-wrap">
+            <div class="hero-slider" id="heroSlider">
+              
+              <!-- Slide 1: iPhone 16 Pro -->
+              <div class="hero-slide slide-iphone active" data-slide="0">
+                <div class="hero-slide-content">
+                  <span class="slide-tag">
+                    <i class="fa-brands fa-apple"></i>
+                    <span class="i18n" data-en="NEW LAUNCH 2026" data-bn="নতুন লঞ্চ ২০২৬">নতুন লঞ্চ ২০২৬</span>
+                  </span>
+                  <h2 class="slide-title">
+                    iPhone 16 Pro <br>
+                    <span class="gold-text">Hello, Apple Intelligence.</span>
+                  </h2>
+                  <p class="slide-desc i18n" 
+                     data-en="Grade 5 titanium design with thinner borders, Camera Control, and the powerful A18 Pro chip."
+                     data-bn="গ্রেড ৫ প্রিমিয়াম টাইটানিয়াম ডিজাইন, আল্ট্রা-থিন ব্যাজেল, ক্যামেরা কন্ট্রোল বাটন ও পাওয়ারফুল A18 প্রো চিপ।">
+                    গ্রেড ৫ প্রিমিয়াম টাইটানিয়াম ডিজাইন, আল্ট্রা-থিন ব্যাজেল, ক্যামেরা কন্ট্রোল বাটন ও পাওয়ারফুল A18 প্রো চিপ।
+                  </p>
+                  <div class="slide-price-tag">
+                    <span class="slide-price-label i18n" data-en="Starting from" data-bn="মূল্য শুরু">মূল্য শুরু</span>
+                    <span class="slide-price-current">৳ 1,54,999</span>
+                    <span class="slide-price-old">৳ 1,65,000</span>
+                  </div>
+                  <div class="slide-actions">
+                    <a href="#buy-iphone" class="btn-gold">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="i18n" data-en="Order Now" data-bn="অর্ডার করুন">অর্ডার করুন</span>
+                    </a>
+                    <a href="#iphone-details" class="btn-outline-gold">
+                      <i class="fa-solid fa-circle-info"></i>
+                      <span class="i18n" data-en="Learn More" data-bn="বিস্তারিত দেখুন">বিস্তারিত দেখুন</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="hero-slide-visual">
+                  <i class="fa-brands fa-apple" style="font-size: 15rem; color: rgba(200, 150, 30, 0.12); filter: drop-shadow(0 0 40px rgba(200,150,30,0.3));"></i>
+                </div>
+              </div>
+
+              <!-- Slide 2: Samsung Galaxy S24 Ultra -->
+              <div class="hero-slide slide-samsung" data-slide="1">
+                <div class="hero-slide-content">
+                  <span class="slide-tag">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span class="i18n" data-en="Galaxy AI is Here" data-bn="Galaxy AI ফিচার সহ">Galaxy AI ফিচার সহ</span>
+                  </span>
+                  <h2 class="slide-title">
+                    Galaxy S24 Ultra <br>
+                    <span class="gold-text">Titanium Elegance.</span>
+                  </h2>
+                  <p class="slide-desc i18n" 
+                     data-en="Built-in S Pen, 200MP Pro-grade camera, and revolutionary Galaxy AI with 0% EMI up to 24 months."
+                     data-bn="বিল্ট-ইন এস-পেন, ২০০ মেগাপিক্সেল ক্যামেরা এবং কৃত্রিম বুদ্ধিমত্তা সম্পন্ন গ্যালাক্সি এআই। সহজ ০% ইএমআই সুবিধা!">
+                    বিল্ট-ইন এস-পেন, ২০০ মেগাপিক্সেল ক্যামেরা এবং কৃত্রিম বুদ্ধিমত্তা সম্পন্ন গ্যালাক্সি এআই। সহজ ০% ইএমআই সুবিধা!
+                  </p>
+                  <div class="slide-price-tag">
+                    <span class="slide-price-label i18n" data-en="Special Deal" data-bn="স্পেশাল অফার">স্পেশাল অফার</span>
+                    <span class="slide-price-current">৳ 1,29,999</span>
+                    <span class="slide-price-old">৳ 1,42,000</span>
+                  </div>
+                  <div class="slide-actions">
+                    <a href="#buy-samsung" class="btn-gold">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <span class="i18n" data-en="Buy Now" data-bn="কিনুন এখনই">কিনুন এখনই</span>
+                    </a>
+                    <a href="#samsung-details" class="btn-outline-gold">
+                      <i class="fa-solid fa-gift"></i>
+                      <span class="i18n" data-en="View Gifts" data-bn="উপহার দেখুন">উপহার দেখুন</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="hero-slide-visual">
+                  <i class="fa-solid fa-mobile-screen" style="font-size: 15rem; color: rgba(59, 130, 246, 0.12); filter: drop-shadow(0 0 40px rgba(59,130,246,0.3));"></i>
+                </div>
+              </div>
+
+              <!-- Slide 3: Mega Phone Exchange Offer -->
+              <div class="hero-slide slide-exchange" data-slide="2">
+                <div class="hero-slide-content">
+                  <span class="slide-tag" style="background: rgba(217, 48, 37, 0.2); border-color: var(--rj-sale-red); color: #ff7675;">
+                    <i class="fa-solid fa-repeat"></i>
+                    <span class="i18n" data-en="MEGA EXCHANGE FEST" data-bn="মেগা এক্সচেঞ্জ অফার">মেগা এক্সচেঞ্জ অফার</span>
+                  </span>
+                  <h2 class="slide-title">
+                    <span class="i18n" data-en="Upgrade Your Old Phone" data-bn="পুরনো ফোন বদলে নিন">পুরনো ফোন বদলে নিন</span> <br>
+                    <span class="gold-text i18n" data-en="Get Up to ৳ 5,000 Bonus" data-bn="সর্বোচ্চ ৫,০০০৳ বোনাস ভাউচার">সর্বোচ্চ ৫,০০০৳ বোনাস ভাউচার</span>
+                  </h2>
+                  <p class="slide-desc i18n" 
+                     data-en="Exchange any smartphone in any condition. Instant valuation and seamless handover at our outlets."
+                     data-bn="যেকোনো কন্ডিশনের পুরনো স্মার্টফোন নিয়ে আসুন আর নিয়ে যান ব্র্যান্ড নিউ স্মার্টফোন সেরা মার্কেট ভ্যালু ও ইনস্ট্যান্ট ক্যাশব্যাক সহ!">
+                    যেকোনো কন্ডিশনের পুরনো স্মার্টফোন নিয়ে আসুন আর নিয়ে যান ব্র্যান্ড নিউ স্মার্টফোন সেরা মার্কেট ভ্যালু ও ইনস্ট্যান্ট ক্যাশব্যাক সহ!
+                  </p>
+                  <div class="slide-actions">
+                    <a href="#exchange" class="btn-gold">
+                      <i class="fa-solid fa-calculator"></i>
+                      <span class="i18n" data-en="Calculate Value" data-bn="এক্সচেঞ্জ ভ্যালু দেখুন">এক্সচেঞ্জ ভ্যালু দেখুন</span>
+                    </a>
+                    <a href="#outlets" class="btn-outline-gold">
+                      <i class="fa-solid fa-location-dot"></i>
+                      <span class="i18n" data-en="Find Outlets" data-bn="নিকটস্থ শোরুম">নিকটস্থ শোরুম</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="hero-slide-visual">
+                  <i class="fa-solid fa-repeat" style="font-size: 14rem; color: rgba(200, 150, 30, 0.15); filter: drop-shadow(0 0 40px rgba(200,150,30,0.4));"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Slider Arrows -->
+            <button class="slider-arrow slider-prev" id="sliderPrevBtn" aria-label="Previous Slide">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow slider-next" id="sliderNextBtn" aria-label="Next Slide">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Slider Pagination Dots -->
+            <div class="slider-dots" id="sliderDots">
+              <button class="slider-dot active" data-dot="0"></button>
+              <button class="slider-dot" data-dot="1"></button>
+              <button class="slider-dot" data-dot="2"></button>
+            </div>
+          </div>
+
+          <!-- Hero Side Promo Banners (Right 1 col) -->
+          <div class="hero-side-banners">
+            
+            <!-- Side Card 1: Apple Watch Ultra 2 -->
+            <div class="side-promo-card">
+              <div>
+                <span class="side-promo-badge i18n" data-en="15% OFF" data-bn="১৫% ছাড়">১৫% ছাড়</span>
+                <h3 class="side-promo-title">Apple Watch Ultra 2</h3>
+                <p class="side-promo-sub i18n" data-en="Rugged titanium GPS + Cellular" data-bn="প্রিমিয়াম টাইটানিয়াম ও ওয়াটারপ্রুফ">প্রিমিয়াম টাইটানিয়াম ও ওয়াটারপ্রুফ</p>
+              </div>
+              <div class="side-promo-price">
+                <span>৳ 98,500</span>
+                <span style="font-size:0.8rem; color:#777; text-decoration:line-through;">৳ 1,08,000</span>
+              </div>
+              <i class="fa-solid fa-stopwatch side-promo-img" style="font-size: 6.5rem; color: rgba(200,150,30,0.18);"></i>
+            </div>
+
+            <!-- Side Card 2: AirPods Pro 2 USB-C -->
+            <div class="side-promo-card">
+              <div>
+                <span class="side-promo-badge" style="background:var(--rj-gold); color:var(--rj-black);" class="i18n" data-en="HOT DEAL" data-bn="হট ডিল">হট ডিল</span>
+                <h3 class="side-promo-title">AirPods Pro (2nd Gen)</h3>
+                <p class="side-promo-sub i18n" data-en="Active Noise Cancelling & USB-C" data-bn="অ্যাক্টিভ নয়েজ ক্যান্সেলেশন ও টাইপ-সি">অ্যাক্টিভ নয়েজ ক্যান্সেলেশন ও টাইপ-সি</p>
+              </div>
+              <div class="side-promo-price">
+                <span>৳ 28,500</span>
+                <span style="font-size:0.8rem; color:#777; text-decoration:line-through;">৳ 32,000</span>
+              </div>
+              <i class="fa-solid fa-headphones-simple side-promo-img" style="font-size: 6.5rem; color: rgba(200,150,30,0.18);"></i>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৩: TRUST & SERVICE HIGHLIGHTS STRIP (Dazzle Style)
+         ===================================================================== -->
+    <section class="trust-features-section">
+      <div class="container">
+        <div class="trust-grid">
+          
+          <!-- Trust 1: 100% Genuine -->
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="trust-info">
+              <h4 class="trust-title i18n" data-en="100% Genuine Products" data-bn="১০০% আসল প্রোডাক্ট">১০০% আসল প্রোডাক্ট</h4>
+              <p class="trust-desc i18n" data-en="Direct from brand authorized sources" data-bn="অথেনটিক গ্যাজেটের শতভাগ নিশ্চয়তা">অথেনটিক গ্যাজেটের শতভাগ নিশ্চয়তা</p>
+            </div>
+          </div>
+
+          <!-- Trust 2: 7 Days Replacement -->
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-arrow-rotate-left"></i>
+            </div>
+            <div class="trust-info">
+              <h4 class="trust-title i18n" data-en="7 Days Replacement" data-bn="৭ দিনের রিপ্লেসমেন্ট">৭ দিনের রিপ্লেসমেন্ট</h4>
+              <p class="trust-desc i18n" data-en="Hassle-free hardware warranty claim" data-bn="যেকোনো ত্রুটিতে সহজ রিপ্লেসমেন্ট">যেকোনো ত্রুটিতে সহজ রিপ্লেসমেন্ট</p>
+            </div>
+          </div>
+
+          <!-- Trust 3: Easy EMI -->
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="trust-info">
+              <h4 class="trust-title i18n" data-en="Up to 36 Months EMI" data-bn="৩৬ মাস পর্যন্ত EMI সুবিধা">৩৬ মাস পর্যন্ত EMI সুবিধা</h4>
+              <p class="trust-desc i18n" data-en="30+ leading banks credit cards supported" data-bn="৩০+ শীর্ষ ব্যাংকের সহজ কিস্তি">৩০+ শীর্ষ ব্যাংকের সহজ কিস্তি</p>
+            </div>
+          </div>
+
+          <!-- Trust 4: Fast Delivery -->
+          <div class="trust-card">
+            <div class="trust-icon-box">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="trust-info">
+              <h4 class="trust-title i18n" data-en="Fast Nationwide Delivery" data-bn="দ্রুততম হোম ডেলিভারি">দ্রুততম হোম ডেলিভারি</h4>
+              <p class="trust-desc i18n" data-en="Same day in Dhaka & 24-72h outside" data-bn="সারা দেশে ক্যাশ অন ডেলিভারি">সারা দেশে ক্যাশ অন ডেলিভারি</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৪: FEATURED CATEGORIES SHOWCASE (Dazzle Style)
+         ===================================================================== -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fa-solid fa-shapes"></i>
+            <span class="i18n" data-en="Featured Categories" data-bn="জনপ্রিয় ক্যাটাগরি">জনপ্রিয় ক্যাটাগরি</span>
+          </h2>
+          <a href="#all-categories" class="view-all-link">
+            <span class="i18n" data-en="View All Categories" data-bn="সকল ক্যাটাগরি দেখুন">সকল ক্যাটাগরি দেখুন</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="categories-grid">
+          
+          <!-- Category 1: iPhones -->
+          <div class="category-card" onclick="location.href='#apple-zone'">
+            <div class="category-icon-wrap">
+              <i class="fa-brands fa-apple"></i>
+            </div>
+            <h3 class="category-name">iPhones</h3>
+            <span class="category-count i18n" data-en="Official & Int." data-bn="অফিসিয়াল ও ইন্টা.">অফিসিয়াল ও ইন্টা.</span>
+          </div>
+
+          <!-- Category 2: Android Phones -->
+          <div class="category-card" onclick="location.href='#smartphones'">
+            <div class="category-icon-wrap">
+              <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="Android Phones" data-bn="স্মার্টফোন">স্মার্টফোন</h3>
+            <span class="category-count">Samsung, Pixel</span>
+          </div>
+
+          <!-- Category 3: MacBooks & Laptops -->
+          <div class="category-card" onclick="location.href='#macbooks'">
+            <div class="category-icon-wrap">
+              <i class="fa-solid fa-laptop"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="MacBooks" data-bn="ম্যাকবুক">ম্যাকবুক</h3>
+            <span class="category-count">M2 / M3 / M4</span>
+          </div>
+
+          <!-- Category 4: iPads & Tablets -->
+          <div class="category-card" onclick="location.href='#tablets'">
+            <div class="category-icon-wrap">
+              <i class="fa-solid fa-tablet-screen-button"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="iPads & Tabs" data-bn="আইপ্যাড ও ট্যাব">আইপ্যাড ও ট্যাব</h3>
+            <span class="category-count">Pro, Air, Mini</span>
+          </div>
+
+          <!-- Category 5: Smart Watches -->
+          <div class="category-card" onclick="location.href='#smartwatches'">
+            <div class="category-icon-wrap">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="Smart Watches" data-bn="স্মার্টওয়াচ">স্মার্টওয়াচ</h3>
+            <span class="category-count">Apple, Galaxy</span>
+          </div>
+
+          <!-- Category 6: Wireless Audio -->
+          <div class="category-card" onclick="location.href='#audio'">
+            <div class="category-icon-wrap">
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="Earbuds & Audio" data-bn="ইয়ারবাডস ও অডিও">ইয়ারবাডস ও অডিও</h3>
+            <span class="category-count">AirPods, Marshall</span>
+          </div>
+
+          <!-- Category 7: Power & Adapters -->
+          <div class="category-card" onclick="location.href='#chargers'">
+            <div class="category-icon-wrap">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="Power & Adapters" data-bn="চার্জার ও এডাপ্টার">চার্জার ও এডাপ্টার</h3>
+            <span class="category-count">Anker, Apple 20W</span>
+          </div>
+
+          <!-- Category 8: Cases & Protection -->
+          <div class="category-card" onclick="location.href='#accessories'">
+            <div class="category-icon-wrap">
+              <i class="fa-solid fa-shield"></i>
+            </div>
+            <h3 class="category-name i18n" data-en="Cases & Covers" data-bn="কেস ও প্রটেকশন">কেস ও প্রটেকশন</h3>
+            <span class="category-count">MagSafe, Spigen</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৪: FLASH SALE / HOT DEALS SECTION (With Live Countdown Timer)
+         ===================================================================== -->
+    <section class="flash-sale-section" id="hot-deals">
+      <div class="container">
+        
+        <div class="flash-header">
+          <div class="flash-title-wrap">
+            <span class="flash-badge">
+              <i class="fa-solid fa-bolt"></i>
+              <span class="i18n" data-en="FLASH SALE" data-bn="ফ্ল্যাশ সেল">ফ্ল্যাশ সেল</span>
+            </span>
+            <h2 class="section-title" style="margin: 0;">
+              <span class="i18n" data-en="Limited Time Mega Deals" data-bn="সীমিত সময়ের সেরা অফার">সীমিত সময়ের সেরা অফার</span>
+            </h2>
+          </div>
+
+          <!-- Live Countdown Timer -->
+          <div class="flash-timer" id="flashTimer">
+            <div class="timer-box">
+              <div class="timer-num" id="timerDays">02</div>
+              <div class="timer-label i18n" data-en="Days" data-bn="দিন">দিন</div>
+            </div>
+            <span class="timer-colon">:</span>
+            <div class="timer-box">
+              <div class="timer-num" id="timerHours">14</div>
+              <div class="timer-label i18n" data-en="Hours" data-bn="ঘণ্টা">ঘণ্টা</div>
+            </div>
+            <span class="timer-colon">:</span>
+            <div class="timer-box">
+              <div class="timer-num" id="timerMinutes">35</div>
+              <div class="timer-label i18n" data-en="Mins" data-bn="মিনিট">মিনিট</div>
+            </div>
+            <span class="timer-colon">:</span>
+            <div class="timer-box">
+              <div class="timer-num" id="timerSeconds">48</div>
+              <div class="timer-label i18n" data-en="Secs" data-bn="সেকেন্ড">সেকেন্ড</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deals Product Grid -->
+        <div class="deals-grid">
+          
+          <!-- Deal Product 1: iPhone 16 Pro Max -->
+          <div class="deal-card">
+            <div class="deal-badge-row">
+              <span class="badge-discount i18n" data-en="Save ৳ 12,000" data-bn="১২,০০০৳ ছাড়">১২,০০০৳ ছাড়</span>
+              <span class="badge-warranty i18n" data-en="Official BTRC" data-bn="অফিসিয়াল BTRC">অফিসিয়াল BTRC</span>
+            </div>
+            <div class="deal-image-wrap">
+              <i class="fa-brands fa-apple deal-img-placeholder"></i>
+            </div>
+            <div class="deal-content">
+              <span class="deal-brand">Apple Flagship</span>
+              <h3 class="deal-title">iPhone 16 Pro Max (256GB - Desert Titanium)</h3>
+              <div class="deal-specs">
+                <span class="spec-pill">256 GB</span>
+                <span class="spec-pill">A18 Pro</span>
+                <span class="spec-pill">Camera Control</span>
+              </div>
+              <div class="deal-price-row">
+                <span class="deal-price-current">৳ 1,74,999</span>
+                <span class="deal-price-old">৳ 1,86,999</span>
+              </div>
+              <!-- Stock Progress -->
+              <div class="deal-stock-wrap">
+                <div class="deal-stock-text">
+                  <span class="i18n" data-en="Sold: 12 items" data-bn="বিক্রি হয়েছে: ১২টি">বিক্রি হয়েছে: ১২টি</span>
+                  <span class="i18n" data-en="Only 4 left" data-bn="বাকি মাত্র ৪টি">বাকি মাত্র ৪টি</span>
+                </div>
+                <div class="deal-progress-bar">
+                  <div class="deal-progress-fill" style="width: 75%;"></div>
+                </div>
+              </div>
+              <!-- Actions -->
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="deal-1" data-name="iPhone 16 Pro Max (256GB)" data-price="174999">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্টে যোগ">কার্টে যোগ</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="deal-1" data-name="iPhone 16 Pro Max (256GB)" data-price="174999">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="এখনই কিনুন">এখনই কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal Product 2: Galaxy S24 Ultra -->
+          <div class="deal-card">
+            <div class="deal-badge-row">
+              <span class="badge-discount i18n" data-en="Save ৳ 10,000" data-bn="১০,০০০৳ ছাড়">১০,০০০৳ ছাড়</span>
+              <span class="badge-warranty i18n" data-en="Official Warranty" data-bn="১ বছর অফিসিয়াল">১ বছর অফিসিয়াল</span>
+            </div>
+            <div class="deal-image-wrap">
+              <i class="fa-solid fa-mobile-screen-button deal-img-placeholder"></i>
+            </div>
+            <div class="deal-content">
+              <span class="deal-brand">Samsung</span>
+              <h3 class="deal-title">Samsung Galaxy S24 Ultra (12GB/512GB)</h3>
+              <div class="deal-specs">
+                <span class="spec-pill">12GB/512GB</span>
+                <span class="spec-pill">S-Pen</span>
+                <span class="spec-pill">Galaxy AI</span>
+              </div>
+              <div class="deal-price-row">
+                <span class="deal-price-current">৳ 1,39,999</span>
+                <span class="deal-price-old">৳ 1,49,999</span>
+              </div>
+              <div class="deal-stock-wrap">
+                <div class="deal-stock-text">
+                  <span class="i18n" data-en="Sold: 18 items" data-bn="বিক্রি হয়েছে: ১৮টি">বিক্রি হয়েছে: ১৮টি</span>
+                  <span class="i18n" data-en="Only 5 left" data-bn="বাকি মাত্র ৫টি">বাকি মাত্র ৫টি</span>
+                </div>
+                <div class="deal-progress-bar">
+                  <div class="deal-progress-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="deal-2" data-name="Samsung Galaxy S24 Ultra" data-price="139999">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্টে যোগ">কার্টে যোগ</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="deal-2" data-name="Samsung Galaxy S24 Ultra" data-price="139999">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="এখনই কিনুন">এখনই কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal Product 3: Google Pixel 9 Pro -->
+          <div class="deal-card">
+            <div class="deal-badge-row">
+              <span class="badge-discount i18n" data-en="Save ৳ 8,000" data-bn="৮,০০০৳ ছাড়">৮,০০০৳ ছাড়</span>
+              <span class="badge-warranty i18n" data-en="Global / USA" data-bn="গ্লোবাল ভ্যারিয়েন্ট">গ্লোবাল ভ্যারিয়েন্ট</span>
+            </div>
+            <div class="deal-image-wrap">
+              <i class="fa-solid fa-camera-retro deal-img-placeholder"></i>
+            </div>
+            <div class="deal-content">
+              <span class="deal-brand">Google Pixel</span>
+              <h3 class="deal-title">Google Pixel 9 Pro (16GB/128GB - Porcelain)</h3>
+              <div class="deal-specs">
+                <span class="spec-pill">16GB RAM</span>
+                <span class="spec-pill">Tensor G4</span>
+                <span class="spec-pill">Gemini AI</span>
+              </div>
+              <div class="deal-price-row">
+                <span class="deal-price-current">৳ 1,08,500</span>
+                <span class="deal-price-old">৳ 1,16,500</span>
+              </div>
+              <div class="deal-stock-wrap">
+                <div class="deal-stock-text">
+                  <span class="i18n" data-en="Sold: 9 items" data-bn="বিক্রি হয়েছে: ৯টি">বিক্রি হয়েছে: ৯টি</span>
+                  <span class="i18n" data-en="Only 3 left" data-bn="বাকি মাত্র ৩টি">বাকি মাত্র ৩টি</span>
+                </div>
+                <div class="deal-progress-bar">
+                  <div class="deal-progress-fill" style="width: 72%;"></div>
+                </div>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="deal-3" data-name="Google Pixel 9 Pro" data-price="108500">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্টে যোগ">কার্টে যোগ</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="deal-3" data-name="Google Pixel 9 Pro" data-price="108500">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="এখনই কিনুন">এখনই কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deal Product 4: Apple Watch Series 10 -->
+          <div class="deal-card">
+            <div class="deal-badge-row">
+              <span class="badge-discount i18n" data-en="Save ৳ 4,000" data-bn="৪,০০০৳ ছাড়">৪,০০০৳ ছাড়</span>
+              <span class="badge-warranty i18n" data-en="Apple Warranty" data-bn="১ বছর অ্যাপল">১ বছর অ্যাপল</span>
+            </div>
+            <div class="deal-image-wrap">
+              <i class="fa-regular fa-clock deal-img-placeholder"></i>
+            </div>
+            <div class="deal-content">
+              <span class="deal-brand">Apple Watch</span>
+              <h3 class="deal-title">Apple Watch Series 10 (46mm - Jet Black)</h3>
+              <div class="deal-specs">
+                <span class="spec-pill">46mm</span>
+                <span class="spec-pill">Wide OLED</span>
+                <span class="spec-pill">Fast Charge</span>
+              </div>
+              <div class="deal-price-row">
+                <span class="deal-price-current">৳ 54,500</span>
+                <span class="deal-price-old">৳ 58,500</span>
+              </div>
+              <div class="deal-stock-wrap">
+                <div class="deal-stock-text">
+                  <span class="i18n" data-en="Sold: 15 items" data-bn="বিক্রি হয়েছে: ১৫টি">বিক্রি হয়েছে: ১৫টি</span>
+                  <span class="i18n" data-en="Only 2 left" data-bn="বাকি মাত্র ২টি">বাকি মাত্র ২টি</span>
+                </div>
+                <div class="deal-progress-bar">
+                  <div class="deal-progress-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="deal-4" data-name="Apple Watch Series 10" data-price="54500">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্টে যোগ">কার্টে যোগ</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="deal-4" data-name="Apple Watch Series 10" data-price="54500">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="এখনই কিনুন">এখনই কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৫: DEDICATED APPLE ZONE (Dazzle Style)
+         ===================================================================== -->
+    <section class="apple-zone-section" id="apple-zone">
+      <div class="container">
+        
+        <!-- Apple Zone Banner Card -->
+        <div class="apple-banner-card">
+          <div class="apple-banner-content">
+            <span class="apple-badge">
+              <i class="fa-brands fa-apple"></i>
+              <span>OFFICIAL APPLE ECOSYSTEM</span>
+            </span>
+            <h2 class="apple-banner-title">
+              Apple Zone <span class="gold-text">by RJ Smart Shop</span>
+            </h2>
+            <p class="apple-banner-desc i18n"
+               data-en="Discover the complete lineup of genuine iPhones, MacBooks, Apple Watches, and original accessories with official Apple warranty and instant EMI."
+               data-bn="১০০% অরিজিনাল অ্যাপল ডিভাইস — আইফোন, ম্যাকবুক, অ্যাপল ওয়াচ ও জেনুইন এক্সেসরিজের এক বিশাল সমাহার। অফিসিয়াল ওয়ারেন্টি ও ইএমআই সুবিধা সহ!">
+              ১০০% অরিজিনাল অ্যাপল ডিভাইস — আইফোন, ম্যাকবুক, অ্যাপল ওয়াচ ও জেনুইন এক্সেসরিজের এক বিশাল সমাহার। অফিসিয়াল ওয়ারেন্টি ও ইএমআই সুবিধা সহ!
+            </p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <span class="spec-pill" style="border-color:var(--rj-gold); color:var(--rj-gold-light);">✓ BTRC Approved</span>
+              <span class="spec-pill" style="border-color:var(--rj-gold); color:var(--rj-gold-light);">✓ 1 Year Apple Care</span>
+              <span class="spec-pill" style="border-color:var(--rj-gold); color:var(--rj-gold-light);">✓ Easy Trade-In</span>
+            </div>
+          </div>
+          <div style="text-align:center;">
+            <i class="fa-brands fa-apple" style="font-size: 8rem; color: rgba(200,150,30,0.25); filter: drop-shadow(0 0 35px rgba(200,150,30,0.3));"></i>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৫: ALL PRODUCTS CATALOG & BRAND FILTER TABS (Dazzle Style)
+         ===================================================================== -->
+    <section class="products-catalog-section" id="catalog">
+      <div class="container">
+        
+        <div class="section-header">
+          <h2 class="section-title">
+            <i class="fa-solid fa-layer-group"></i>
+            <span class="i18n" data-en="All Smartphones & Gadgets" data-bn="সকল স্মার্টফোন ও গ্যাজেট">সকল স্মার্টফোন ও গ্যাজেট</span>
+          </h2>
+          <span style="font-size: 0.85rem; color: #888;">
+            <span class="i18n" data-en="Showing: " data-bn="প্রদর্শন: ">প্রদর্শন: </span>
+            <strong id="catalogCount" style="color:var(--rj-gold);">8</strong> 
+            <span class="i18n" data-en="Products" data-bn="টি প্রোডাক্ট">টি প্রোডাক্ট</span>
+          </span>
+        </div>
+
+        <!-- Brand Filter Tabs Bar -->
+        <div class="filter-tabs-wrap" id="brandFilterTabs">
+          <button class="filter-tab active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i>
+            <span class="i18n" data-en="All Devices" data-bn="সকল ডিভাইস">সকল ডিভাইস</span>
+          </button>
+          <button class="filter-tab" data-filter="apple">
+            <i class="fa-brands fa-apple"></i>
+            <span>Apple</span>
+          </button>
+          <button class="filter-tab" data-filter="samsung">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span>Samsung</span>
+          </button>
+          <button class="filter-tab" data-filter="pixel">
+            <i class="fa-brands fa-google"></i>
+            <span>Google Pixel</span>
+          </button>
+          <button class="filter-tab" data-filter="xiaomi">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Xiaomi</span>
+          </button>
+          <button class="filter-tab" data-filter="oneplus">
+            <i class="fa-solid fa-plus"></i>
+            <span>OnePlus</span>
+          </button>
+        </div>
+
+        <!-- Catalog Products Grid -->
+        <div class="products-grid" id="catalogProductsGrid">
+          
+          <!-- Product 1: iPhone 16 -->
+          <div class="catalog-card" data-brand="apple">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-official">BTRC Official</span>
+              </div>
+              <button class="quick-view-btn" data-product="p1" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-brands fa-apple deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Apple</span>
+              <h3 class="catalog-title">iPhone 16 (128GB - Ultramarine)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">128 GB</span>
+                <span class="chip-spec">A18</span>
+                <span class="chip-spec">Dual SIM</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 1,22,500</span>
+                <span class="catalog-price-old">৳ 1,28,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-1" data-name="iPhone 16 (128GB)" data-price="122500">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-1" data-name="iPhone 16 (128GB)" data-price="122500">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: iPhone 15 Pro -->
+          <div class="catalog-card" data-brand="apple">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-unofficial">1Y Store Warranty</span>
+              </div>
+              <button class="quick-view-btn" data-product="p2" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-brands fa-apple deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Apple</span>
+              <h3 class="catalog-title">iPhone 15 Pro (128GB - Natural Titanium)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">128 GB</span>
+                <span class="chip-spec">A17 Pro</span>
+                <span class="chip-spec">120Hz ProMotion</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 1,28,000</span>
+                <span class="catalog-price-old">৳ 1,36,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-2" data-name="iPhone 15 Pro (128GB)" data-price="128000">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-2" data-name="iPhone 15 Pro (128GB)" data-price="128000">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3: Samsung Galaxy S24+ -->
+          <div class="catalog-card" data-brand="samsung">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-official">Official Warranty</span>
+              </div>
+              <button class="quick-view-btn" data-product="p3" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-solid fa-mobile-screen deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Samsung</span>
+              <h3 class="catalog-title">Samsung Galaxy S24+ (12GB/256GB - Onyx Black)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">12GB/256GB</span>
+                <span class="chip-spec">QHD+ AMOLED</span>
+                <span class="chip-spec">Galaxy AI</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 1,06,500</span>
+                <span class="catalog-price-old">৳ 1,14,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-3" data-name="Samsung Galaxy S24+" data-price="106500">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-3" data-name="Samsung Galaxy S24+" data-price="106500">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4: Samsung Galaxy Z Flip6 -->
+          <div class="catalog-card" data-brand="samsung">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-official">Official Warranty</span>
+              </div>
+              <button class="quick-view-btn" data-product="p4" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-solid fa-mobile-screen deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Samsung Foldable</span>
+              <h3 class="catalog-title">Samsung Galaxy Z Flip6 (12GB/256GB)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">12GB/256GB</span>
+                <span class="chip-spec">Flex Window</span>
+                <span class="chip-spec">Snapdragon 8 Gen 3</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 1,19,000</span>
+                <span class="catalog-price-old">৳ 1,28,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-4" data-name="Galaxy Z Flip6" data-price="119000">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-4" data-name="Galaxy Z Flip6" data-price="119000">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5: Google Pixel 9 -->
+          <div class="catalog-card" data-brand="pixel">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-unofficial">1Y Service Warranty</span>
+              </div>
+              <button class="quick-view-btn" data-product="p5" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-brands fa-google deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Google Pixel</span>
+              <h3 class="catalog-title">Google Pixel 9 (12GB/128GB - Obsidian)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">12GB RAM</span>
+                <span class="chip-spec">Tensor G4</span>
+                <span class="chip-spec">Actua Display</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 86,500</span>
+                <span class="catalog-price-old">৳ 92,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-5" data-name="Google Pixel 9" data-price="86500">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-5" data-name="Google Pixel 9" data-price="86500">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6: Xiaomi 14 Ultra -->
+          <div class="catalog-card" data-brand="xiaomi">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-official">Official Warranty</span>
+              </div>
+              <button class="quick-view-btn" data-product="p6" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-solid fa-camera deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Xiaomi Flagship</span>
+              <h3 class="catalog-title">Xiaomi 14 Ultra (16GB/512GB - Leica Optics)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">16GB/512GB</span>
+                <span class="chip-spec">1-inch Leica</span>
+                <span class="chip-spec">90W HyperCharge</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 1,24,000</span>
+                <span class="catalog-price-old">৳ 1,32,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-6" data-name="Xiaomi 14 Ultra" data-price="124000">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-6" data-name="Xiaomi 14 Ultra" data-price="124000">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7: OnePlus 12 -->
+          <div class="catalog-card" data-brand="oneplus">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-unofficial">1Y Warranty</span>
+              </div>
+              <button class="quick-view-btn" data-product="p7" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-solid fa-plus deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">OnePlus</span>
+              <h3 class="catalog-title">OnePlus 12 (16GB/512GB - Silky Black)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">16GB/512GB</span>
+                <span class="chip-spec">Hasselblad Gen 4</span>
+                <span class="chip-spec">5400mAh Battery</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 89,500</span>
+                <span class="catalog-price-old">৳ 96,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-7" data-name="OnePlus 12" data-price="89500">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-7" data-name="OnePlus 12" data-price="89500">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8: MacBook Air M3 -->
+          <div class="catalog-card" data-brand="apple">
+            <div class="catalog-card-header">
+              <div class="catalog-badges">
+                <span class="badge-tag-official">Apple 1Y International</span>
+              </div>
+              <button class="quick-view-btn" data-product="p8" title="কুইক ভিউ">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <i class="fa-solid fa-laptop deal-img-placeholder" style="font-size:4.5rem;"></i>
+            </div>
+            <div class="catalog-card-body">
+              <span class="catalog-brand">Apple MacBook</span>
+              <h3 class="catalog-title">MacBook Air 13.6-inch (M3 / 8GB / 256GB - Midnight)</h3>
+              <div class="catalog-variant-chips">
+                <span class="chip-spec">M3 Chip</span>
+                <span class="chip-spec">Liquid Retina</span>
+                <span class="chip-spec">18h Battery</span>
+              </div>
+              <div class="catalog-price-row">
+                <span class="catalog-price-current">৳ 1,32,000</span>
+                <span class="catalog-price-old">৳ 1,40,000</span>
+              </div>
+              <div class="deal-actions">
+                <button class="btn-card-cart add-cart-trigger" data-id="cat-8" data-name="MacBook Air M3" data-price="132000">
+                  <i class="fa-solid fa-cart-plus"></i>
+                  <span class="i18n" data-en="Add Cart" data-bn="কার্ট">কার্ট</span>
+                </button>
+                <button class="btn-card-buy buy-now-trigger" data-id="cat-8" data-name="MacBook Air M3" data-price="132000">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span class="i18n" data-en="Buy Now" data-bn="কিনুন">কিনুন</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৬: PHONE EXCHANGE & TRADE-IN SECTION (Dazzle Style)
+         ===================================================================== -->
+    <section class="exchange-section" id="exchange">
+      <div class="container">
+        <div class="exchange-grid">
+          
+          <!-- Left Info Side -->
+          <div class="exchange-info-side">
+            <span class="exchange-badge-tag">
+              <i class="fa-solid fa-repeat"></i>
+              <span class="i18n" data-en="MEGA PHONE TRADE-IN 2026" data-bn="মেগা ফোন এক্সচেঞ্জ অফার ২০২৬">মেগা ফোন এক্সচেঞ্জ অফার ২০২৬</span>
+            </span>
+            <h2 class="exchange-heading">
+              <span class="i18n" data-en="Upgrade Your Old Phone" data-bn="পুরনো ফোন বদলে নিন">পুরনো ফোন বদলে নিন</span> <br>
+              <span class="gold-text i18n" data-en="Get Up to ৳ 5,000 Bonus!" data-bn="সর্বোচ্চ ৫,০০০৳ বোনাস ভাউচার সহ!">সর্বোচ্চ ৫,০০০৳ বোনাস ভাউচার সহ!</span>
+            </h2>
+            <p class="exchange-desc i18n"
+               data-en="Don't let your old device sit in a drawer. Exchange it for the latest flagship at RJ Smart Shop with instant doorstep or outlet valuation."
+               data-bn="আপনার ব্যবহৃত যেকোনো ব্র্যান্ডের পুরনো ফোন জমা দিয়ে সরাসরি নতুন আইফোন, স্যামসাং বা পিক্সেল ফোন নেওয়ার সবচেয়ে সহজ ও নিরাপদ সুযোগ!">
+              আপনার ব্যবহৃত যেকোনো ব্র্যান্ডের পুরনো ফোন জমা দিয়ে সরাসরি নতুন আইফোন, স্যামসাং বা পিক্সেল ফোন নেওয়ার সবচেয়ে সহজ ও নিরাপদ সুযোগ!
+            </p>
+
+            <!-- 3 Simple Steps -->
+            <div class="exchange-steps">
+              <div class="exchange-step-item">
+                <div class="step-num-box">১</div>
+                <div class="step-content">
+                  <h4 class="i18n" data-en="1. Select Device & Condition" data-bn="১. মডেল ও কন্ডিশন সিলেক্ট করুন">১. মডেল ও কন্ডিশন সিলেক্ট করুন</h4>
+                  <p class="i18n" data-en="Choose your old phone details to calculate instant estimated trade-in value." data-bn="আপনার পুরনো ফোনের ব্র্যান্ড, মডেল ও অবস্থা দিয়ে আনুমানিক এক্সচেঞ্জ মূল্য দেখুন।">আপনার পুরনো ফোনের ব্র্যান্ড, মডেল ও অবস্থা দিয়ে আনুমানিক এক্সচেঞ্জ মূল্য দেখুন।</p>
+                </div>
+              </div>
+
+              <div class="exchange-step-item">
+                <div class="step-num-box">২</div>
+                <div class="step-content">
+                  <h4 class="i18n" data-en="2. Visit Showroom or Request Pickup" data-bn="২. নিকটস্থ শোরুমে ফোনটি নিয়ে আসুন">২. নিকটস্থ শোরুমে ফোনটি নিয়ে আসুন</h4>
+                  <p class="i18n" data-en="Bring your phone to Jamuna Future Park, Bashundhara City, or Finlay Square." data-bn="আমাদের যমুনা ফিউচার পার্ক, বসুন্ধরা সিটি বা চট্টগ্রাম ফিনলে স্কয়ার শোরুমে ডিভাইসটি আনুন।">আমাদের যমুনা ফিউচার পার্ক, বসুন্ধরা সিটি বা চট্টগ্রাম ফিনলে স্কয়ার শোরুমে ডিভাইসটি আনুন।</p>
+                </div>
+              </div>
+
+              <div class="exchange-step-item">
+                <div class="step-num-box">৩</div>
+                <div class="step-content">
+                  <h4 class="i18n" data-en="3. 5-Minute Test & Instant Handover" data-bn="৩. ৫ মিনিটে ইনস্ট্যান্ট নতুন ফোন বুঝে নিন">৩. ৫ মিনিটে ইনস্ট্যান্ট নতুন ফোন বুঝে নিন</h4>
+                  <p class="i18n" data-en="Our technicians verify your device and hand over your brand new dream phone!" data-bn="আমাদের এক্সপার্ট টিম ৫ মিনিটে টেস্ট সম্পন্ন করে সাথে সাথে নতুন ফোন বুঝিয়ে দেবে!">আমাদের এক্সপার্ট টিম ৫ মিনিটে টেস্ট সম্পন্ন করে সাথে সাথে নতুন ফোন বুঝিয়ে দেবে!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Calculator Side -->
+          <div class="exchange-calc-card">
+            <h3 class="calc-card-title">
+              <i class="fa-solid fa-calculator" style="color:var(--rj-gold);"></i>
+              <span class="i18n" data-en="Trade-In Price Calculator" data-bn="ইনস্ট্যান্ট এক্সচেঞ্জ ক্যালকুলেটর">ইনস্ট্যান্ট এক্সচেঞ্জ ক্যালকুলেটর</span>
+            </h3>
+            <p class="calc-card-sub i18n" data-en="Select your old phone to calculate exchange value" data-bn="আপনার বর্তমান ফোনের তথ্য নির্বাচন করে ভ্যালু হিসাব করুন">আপনার বর্তমান ফোনের তথ্য নির্বাচন করে ভ্যালু হিসাব করুন</p>
+
+            <!-- Brand Select -->
+            <div class="calc-form-group">
+              <label class="calc-label i18n" data-en="Your Current Phone Brand" data-bn="বর্তমান ফোনের ব্র্যান্ড">বর্তমান ফোনের ব্র্যান্ড</label>
+              <select class="calc-select" id="exOldBrand">
+                <option value="apple">Apple (iPhone)</option>
+                <option value="samsung">Samsung</option>
+                <option value="pixel">Google Pixel</option>
+                <option value="xiaomi">Xiaomi / Poco</option>
+                <option value="oneplus">OnePlus</option>
+              </select>
+            </div>
+
+            <!-- Model Select -->
+            <div class="calc-form-group">
+              <label class="calc-label i18n" data-en="Select Phone Model" data-bn="ফোনের মডেল নির্বাচন করুন">ফোনের মডেল নির্বাচন করুন</label>
+              <select class="calc-select" id="exOldModel">
+                <option value="55000">iPhone 14 Pro (128GB/256GB)</option>
+                <option value="42000">iPhone 13 (128GB)</option>
+                <option value="32000">iPhone 12 (128GB)</option>
+                <option value="68000">iPhone 15 Pro (128GB)</option>
+                <option value="48000">Galaxy S23 Ultra</option>
+                <option value="35000">Galaxy S22 Ultra</option>
+                <option value="38000">Pixel 8 Pro</option>
+                <option value="25000">OnePlus 11</option>
+              </select>
+            </div>
+
+            <!-- Condition Selection -->
+            <div class="calc-form-group">
+              <label class="calc-label i18n" data-en="Physical Condition" data-bn="ফোনের কন্ডিশন / অবস্থা">ফোনের কন্ডিশন / অবস্থা</label>
+              <div class="condition-pills" id="conditionPills">
+                <div class="condition-pill active" data-mult="1.0">
+                  <div class="condition-pill-name i18n" data-en="Like New" data-bn="ইনটেক/ফ্রেশ">ইনটেক/ফ্রেশ</div>
+                  <div class="condition-pill-sub i18n" data-en="No scratches" data-bn="কোনো দাগ নেই">কোনো দাগ নেই</div>
+                </div>
+                <div class="condition-pill" data-mult="0.85">
+                  <div class="condition-pill-name i18n" data-en="Good" data-bn="ভালো কন্ডিশন">ভালো কন্ডিশন</div>
+                  <div class="condition-pill-sub i18n" data-en="Minor scratches" data-bn="হালকা স্ক্র্যাচ">হালকা স্ক্র্যাচ</div>
+                </div>
+                <div class="condition-pill" data-mult="0.65">
+                  <div class="condition-pill-name i18n" data-en="Fair" data-bn="সাধারণ কন্ডিশন">সাধারণ কন্ডিশন</div>
+                  <div class="condition-pill-sub i18n" data-en="Body dent/scuff" data-bn="ডেন্ট বা দাগ আছে">ডেন্ট বা দাগ আছে</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Target Phone -->
+            <div class="calc-form-group">
+              <label class="calc-label i18n" data-en="Upgrade To (Target Phone)" data-bn="যে নতুন ফোনটি নিতে চান">যে নতুন ফোনটি নিতে চান</label>
+              <select class="calc-select" id="exTargetPhone">
+                <option value="154999">iPhone 16 Pro (৳ 1,54,999)</option>
+                <option value="174999">iPhone 16 Pro Max (৳ 1,74,999)</option>
+                <option value="122500">iPhone 16 (৳ 1,22,500)</option>
+                <option value="139999">Galaxy S24 Ultra (৳ 1,39,999)</option>
+                <option value="108500">Pixel 9 Pro (৳ 1,08,500)</option>
+              </select>
+            </div>
+
+            <!-- Valuation Output Box -->
+            <div class="calc-result-box">
+              <div class="calc-result-row">
+                <span class="i18n" data-en="Estimated Trade-in Value:" data-bn="পুরনো ফোনের আনুমানিক ভ্যালু:">পুরনো ফোনের আনুমানিক ভ্যালু:</span>
+                <span class="calc-result-val" id="resOldVal">৳ 55,000</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="i18n" data-en="RJ Exchange Bonus Voucher:" data-bn="RJ স্পেশাল এক্সচেঞ্জ বোনাস:">RJ স্পেশাল এক্সচেঞ্জ বোনাস:</span>
+                <span class="calc-result-val" style="color:#22c55e;">+ ৳ 3,000</span>
+              </div>
+              <div class="calc-result-row">
+                <span class="i18n" data-en="Target Phone Price:" data-bn="নতুন ফোনের রেগুলার প্রাইজ:">নতুন ফোনের রেগুলার প্রাইজ:</span>
+                <span class="calc-result-val" id="resTargetVal">৳ 1,54,999</span>
+              </div>
+              <div class="calc-pay-row">
+                <span class="calc-pay-label i18n" data-en="You Only Pay:" data-bn="আপনাকে পরিশোধ করতে হবে:">আপনাকে পরিশোধ করতে হবে:</span>
+                <span class="calc-pay-val" id="resPayVal">৳ 96,999</span>
+              </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="calc-actions">
+              <button class="btn-exchange-submit" id="bookExchangeBtn">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span class="i18n" data-en="Book Exchange Now" data-bn="এক্সচেঞ্জ বুকিং দিন">এক্সচেঞ্জ বুকিং দিন</span>
+              </button>
+              <a href="https://wa.me/8801700000000?text=Hello%20RJ%20Smart%20Shop%20I%20want%20to%20exchange%20my%20phone" target="_blank" class="btn-exchange-wa">
+                <i class="fa-brands fa-whatsapp" style="font-size:1.1rem;"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ধাপ ৫: QUICK VIEW MODAL (Dazzle Style)
+         ===================================================================== -->
+    <div class="modal-overlay" id="quickViewModal">
+      <div class="modal-content-card">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div style="display:flex; gap:2rem; flex-wrap:wrap; align-items:center;">
+          <div style="flex:1; min-width:220px; text-align:center; background:#111; padding:2rem; border-radius:12px; border:1px solid #333;">
+            <div id="modalProductIcon" style="font-size:5rem; color:var(--rj-gold);">🍎</div>
+            <span id="modalProductBadge" class="badge-tag-official" style="margin-top:1rem; display:inline-block;">Official</span>
+          </div>
+          <div style="flex:1.5; min-width:260px;">
+            <span id="modalProductBrand" style="font-size:0.75rem; color:#888; text-transform:uppercase; font-weight:700;">Brand</span>
+            <h3 id="modalProductTitle" style="font-size:1.4rem; font-weight:800; color:#fff; margin:4px 0 10px;">Product Name</h3>
+            <div id="modalProductPriceRow" style="display:flex; align-items:baseline; gap:10px; margin-bottom:12px;">
+              <span id="modalPriceCurrent" style="font-size:1.6rem; font-weight:800; color:var(--rj-gold-light);">৳ 0</span>
+              <span id="modalPriceOld" style="font-size:0.9rem; color:#666; text-decoration:line-through;">৳ 0</span>
+            </div>
+            <p id="modalProductDesc" style="font-size:0.85rem; color:#bbb; line-height:1.5; margin-bottom:1rem;">
+              অফিসিয়াল অথেনটিক ডিভাইস, সম্পূর্ণ ব্র‍্যান্ড নিউ ইনটেক ও অফিসিয়াল ওয়ারেন্টি সুবিধা।
+            </p>
+            <div style="display:flex; gap:10px; margin-top:1.5rem;">
+              <button class="btn-card-buy" id="modalBuyBtn" style="padding:10px 20px; font-size:0.9rem;">
+                <i class="fa-solid fa-bolt"></i>
+                <span class="i18n" data-en="Instant Buy" data-bn="সরাসরি কিনুন">সরাসরি কিনুন</span>
+              </button>
+              <button class="btn-card-cart" id="modalAddCartBtn" style="padding:10px 20px; font-size:0.9rem;">
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="i18n" data-en="Add to Cart" data-bn="কার্টে যোগ">কার্টে যোগ</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- =====================================================================
+       ধাপ ৮: OUTLET LOCATIONS SHOWCASE (Dazzle Style)
+       ===================================================================== -->
+  <section class="outlets-section" id="outlets">
+    <div class="container">
+      
+      <div class="section-header">
+        <h2 class="section-title">
+          <i class="fa-solid fa-store"></i>
+          <span class="i18n" data-en="Our Physical Showrooms" data-bn="আমাদের শোরুম ও আউটলেটসমূহ">আমাদের শোরুম ও আউটলেটসমূহ</span>
+        </h2>
+        <span style="font-size:0.85rem; color:#888;" class="i18n" data-en="Visit us for hands-on experience & instant exchange" data-bn="সরাসরি দেখে কিনতে ও ইনস্ট্যান্ট এক্সচেঞ্জ করতে চলে আসুন">
+          সরাসরি দেখে কিনতে ও ইনস্ট্যান্ট এক্সচেঞ্জ করতে চলে আসুন
+        </span>
+      </div>
+
+      <div class="outlets-grid">
+        
+        <!-- Outlet 1: Jamuna Future Park -->
+        <div class="outlet-card">
+          <div>
+            <div class="outlet-card-top">
+              <span class="outlet-city-badge">Dhaka (কুড়িল)</span>
+              <span class="outlet-status-pill i18n" data-en="Open Today" data-bn="আজ খোলা আছে">আজ খোলা আছে</span>
+            </div>
+            <h3 class="outlet-name">Jamuna Future Park Branch</h3>
+            <div class="outlet-details">
+              <div class="outlet-detail-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="i18n" 
+                      data-en="Level 4, Block A, Shop #4A-018, Jamuna Future Park, Kuril, Dhaka-1229"
+                      data-bn="লেভেল ৪, ব্লক এ, শপ #৪এ-০১৮, যমুনা ফিউচার পার্ক, কুড়িল, ঢাকা-১২২৯">
+                  লেভেল ৪, ব্লক এ, শপ #৪এ-০১৮, যমুনা ফিউচার পার্ক, কুড়িল, ঢাকা-১২২৯
+                </span>
+              </div>
+              <div class="outlet-detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+880 1700-000001 / 01800-000001</span>
+              </div>
+              <div class="outlet-detail-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="i18n" data-en="11:00 AM – 9:00 PM (Weekly Off: Wednesday)" data-bn="সকাল ১১:০০ – রাত ৯:০০ (সাপ্তাহিক বন্ধ: বুধবার)">
+                  সকাল ১১:০০ – রাত ৯:০০ (সাপ্তাহিক বন্ধ: বুধবার)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="outlet-btn-row">
+            <a href="tel:+8801700000001" class="btn-outlet-call">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span class="i18n" data-en="Call Branch" data-bn="কল করুন">কল করুন</span>
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="btn-outlet-dir">
+              <i class="fa-solid fa-location-arrow"></i>
+              <span class="i18n" data-en="Get Directions" data-bn="লোকেশন ম্যাপ">লোকেশন ম্যাপ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Outlet 2: Bashundhara City -->
+        <div class="outlet-card">
+          <div>
+            <div class="outlet-card-top">
+              <span class="outlet-city-badge">Dhaka (পান্থপথ)</span>
+              <span class="outlet-status-pill i18n" data-en="Open Today" data-bn="আজ খোলা আছে">আজ খোলা আছে</span>
+            </div>
+            <h3 class="outlet-name">Bashundhara City Branch</h3>
+            <div class="outlet-details">
+              <div class="outlet-detail-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="i18n" 
+                      data-en="Level 5, Block B, Shop #5B-032, Bashundhara City Shopping Mall, Panthapath, Dhaka"
+                      data-bn="লেভেল ৫, ব্লক বি, শপ #৫বি-০৩২, বসুন্ধরা সিটি শপিং মল, পান্থপথ, ঢাকা">
+                  লেভেল ৫, ব্লক বি, শপ #৫বি-০৩২, বসুন্ধরা সিটি শপিং মল, পান্থপথ, ঢাকা
+                </span>
+              </div>
+              <div class="outlet-detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+880 1700-000002 / 01900-000002</span>
+              </div>
+              <div class="outlet-detail-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="i18n" data-en="10:30 AM – 8:30 PM (Weekly Off: Tuesday)" data-bn="সকাল ১০:৩০ – রাত ৮:৩০ (সাপ্তাহিক বন্ধ: মঙ্গলবার)">
+                  সকাল ১০:৩০ – রাত ৮:৩০ (সাপ্তাহিক বন্ধ: মঙ্গলবার)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="outlet-btn-row">
+            <a href="tel:+8801700000002" class="btn-outlet-call">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span class="i18n" data-en="Call Branch" data-bn="কল করুন">কল করুন</span>
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="btn-outlet-dir">
+              <i class="fa-solid fa-location-arrow"></i>
+              <span class="i18n" data-en="Get Directions" data-bn="লোকেশন ম্যাপ">লোকেশন ম্যাপ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Outlet 3: Finlay Square Chittagong -->
+        <div class="outlet-card">
+          <div>
+            <div class="outlet-card-top">
+              <span class="outlet-city-badge">Chittagong (চট্টগ্রাম)</span>
+              <span class="outlet-status-pill i18n" data-en="Open Today" data-bn="আজ খোলা আছে">আজ খোলা আছে</span>
+            </div>
+            <h3 class="outlet-name">Chittagong Finlay Square Branch</h3>
+            <div class="outlet-details">
+              <div class="outlet-detail-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="i18n" 
+                      data-en="Level 3, Shop #306, Finlay Square, 2 No. Gate, East Nasirabad, Chittagong"
+                      data-bn="লেভেল ৩, শপ #৩০৬, ফিনলে স্কয়ার, ২ নং গেট, পূর্ব নাসিরাবাদ, চট্টগ্রাম">
+                  লেভেল ৩, শপ #৩০৬, ফিনলে স্কয়ার, ২ নং গেট, পূর্ব নাসিরাবাদ, চট্টগ্রাম
+                </span>
+              </div>
+              <div class="outlet-detail-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+880 1700-000003 / 01600-000003</span>
+              </div>
+              <div class="outlet-detail-item">
+                <i class="fa-regular fa-clock"></i>
+                <span class="i18n" data-en="11:00 AM – 9:00 PM (Open 7 Days)" data-bn="সকাল ১১:০০ – রাত ৯:০০ (সপ্তাহে ৭ দিন খোলা)">
+                  সকাল ১১:০০ – রাত ৯:০০ (সপ্তাহে ৭ দিন খোলা)
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="outlet-btn-row">
+            <a href="tel:+8801700000003" class="btn-outlet-call">
+              <i class="fa-solid fa-phone-volume"></i>
+              <span class="i18n" data-en="Call Branch" data-bn="কল করুন">কল করুন</span>
+            </a>
+            <a href="https://maps.google.com" target="_blank" class="btn-outlet-dir">
+              <i class="fa-solid fa-location-arrow"></i>
+              <span class="i18n" data-en="Get Directions" data-bn="লোকেশন ম্যাপ">লোকেশন ম্যাপ</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <!-- =====================================================================
+       ধাপ ৮: MAIN FOOTER (Dazzle Style)
+       ===================================================================== -->
+  <footer class="main-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="footer-col">
+          <div class="footer-brand-logo">
+            <img src="assets/logo.png" alt="RJ SMART SHOP Logo">
+            <div class="brand-title-wrap">
+              <span class="brand-title">RJ SMART SHOP</span>
+              <span class="brand-subtitle">& GALLERY</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc i18n"
+             data-en="Bangladesh's premier destination for genuine smartphones, gadgets, and accessories. Official warranties, easy trade-in exchange, and 0% EMI."
+             data-bn="বাংলাদেশে অথেনটিক স্মার্টফোন, গ্যাজেট এবং অরিজিনাল এক্সেসরিজের বিশ্বস্ত ব্র্যান্ড। সেরা মার্কেট প্রাইস, অফিসিয়াল ওয়ারেন্টি ও সহজ কিস্তি সুবিধা!">
+            বাংলাদেশে অথেনটিক স্মার্টফোন, গ্যাজেট এবং অরিজিনাল এক্সেসরিজের বিশ্বস্ত ব্র্যান্ড। সেরা মার্কেট প্রাইস, অফিসিয়াল ওয়ারেন্টি ও সহজ কিস্তি সুবিধা!
+          </p>
+          <div class="footer-contact-info">
+            <a href="tel:+8801700000000">
+              <i class="fa-solid fa-headset"></i>
+              <span>হটলাইন: +880 1700-000000</span>
+            </a>
+            <a href="mailto:support@rjsmartshop.com">
+              <i class="fa-solid fa-envelope"></i>
+              <span>support@rjsmartshop.com</span>
+            </a>
+            <a href="#outlets">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>ঢাকা (যমুনা, বসুন্ধরা) ও চট্টগ্রাম (ফিনলে)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading i18n" data-en="Quick Links" data-bn="প্রয়োজনীয় লিংক">প্রয়োজনীয় লিংক</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="index.html" class="i18n" data-en="Home" data-bn="হোম পেজ">হোম পেজ</a></li>
+            <li class="footer-link-item"><a href="#apple-zone" class="i18n" data-en="Apple Zone" data-bn="Apple Zone">Apple Zone</a></li>
+            <li class="footer-link-item"><a href="#catalog" class="i18n" data-en="All Smartphones" data-bn="সকল স্মার্টফোন">সকল স্মার্টফোন</a></li>
+            <li class="footer-link-item"><a href="#hot-deals" class="i18n" data-en="Flash Deals" data-bn="হট ডিলস ও অফার">হট ডিলস ও অফার</a></li>
+            <li class="footer-link-item"><a href="#exchange" class="i18n" data-en="Exchange Calculator" data-bn="এক্সচেঞ্জ ক্যালকুলেটর">এক্সচেঞ্জ ক্যালকুলেটর</a></li>
+            <li class="footer-link-item"><a href="#outlets" class="i18n" data-en="Showroom Outlets" data-bn="শোরুম লোকেশন">শোরুম লোকেশন</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Care & Policies -->
+        <div class="footer-col">
+          <h4 class="footer-heading i18n" data-en="Policies & Support" data-bn="পলিসি ও কাস্টমার সাপোর্ট">পলিসি ও কাস্টমার সাপোর্ট</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#warranty-policy" class="i18n" data-en="Warranty Policy" data-bn="ওয়ারেন্টি পলিসি">ওয়ারেন্টি পলিসি</a></li>
+            <li class="footer-link-item"><a href="#replacement-terms" class="i18n" data-en="7 Days Replacement" data-bn="৭ দিনের রিপ্লেসমেন্ট">৭ দিনের রিপ্লেসমেন্ট</a></li>
+            <li class="footer-link-item"><a href="#emi-guidelines" class="i18n" data-en="EMI Facility (30+ Banks)" data-bn="সহজ EMI সুবিধা (৩০+ ব্যাংক)">সহজ EMI সুবিধা (৩০+ ব্যাংক)</a></li>
+            <li class="footer-link-item"><a href="#exchange-terms" class="i18n" data-en="Trade-In Guidelines" data-bn="এক্সচেঞ্জ নির্দেশিকা">এক্সচেঞ্জ নির্দেশিকা</a></li>
+            <li class="footer-link-item"><a href="#privacy-policy" class="i18n" data-en="Privacy Policy" data-bn="প্রাইভেসি পলিসি">প্রাইভেসি পলিসি</a></li>
+            <li class="footer-link-item"><a href="#terms-conditions" class="i18n" data-en="Terms & Conditions" data-bn="শর্তাবলী">শর্তাবলী</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter & Social -->
+        <div class="footer-col">
+          <h4 class="footer-heading i18n" data-en="Stay Connected" data-bn="যুক্ত থাকুন আমাদের সাথে">যুক্ত থাকুন আমাদের সাথে</h4>
+          <p class="footer-newsletter-text i18n"
+             data-en="Subscribe to receive exclusive launch deals, flash sale alerts, and VIP discounts."
+             data-bn="নতুন ফ্ল্যাগশিপ লঞ্চ ও আকর্ষণীয় ডিসকাউন্ট অফারের আপডেট পেতে ইমেইল সাবস্ক্রাইব করুন।">
+            নতুন ফ্ল্যাগশিপ লঞ্চ ও আকর্ষণীয় ডিসকাউন্ট অফারের আপডেট পেতে ইমেইল সাবস্ক্রাইব করুন।
+          </p>
+          <form class="footer-newsletter-form" id="newsletterForm">
+            <input type="email" class="footer-newsletter-input" required placeholder="আপনার ইমেইল এড্রেস...">
+            <button type="submit" class="footer-newsletter-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <!-- Social Icons -->
+          <div class="footer-social-wrap">
+            <a href="https://facebook.com" target="_blank" class="social-circle-btn" title="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-circle-btn" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-circle-btn" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://wa.me/8801700000000" target="_blank" class="social-circle-btn" title="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" class="social-circle-btn" title="TikTok">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Strip -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 <strong>RJ SMART SHOP and GALLERY</strong>. All rights reserved. Designed for excellence.
+        </div>
+
+        <!-- Payment Badges -->
+        <div class="payment-badges-wrap">
+          <span class="pay-badge-pill" style="color:#e2136e;">bKash</span>
+          <span class="pay-badge-pill" style="color:#f7941d;">Nagad</span>
+          <span class="pay-badge-pill" style="color:#1a1f71;">VISA</span>
+          <span class="pay-badge-pill" style="color:#eb001b;">Mastercard</span>
+          <span class="pay-badge-pill" style="color:#007bc1;">AMEX</span>
+          <span class="pay-badge-pill">0% EMI</span>
+          <span class="pay-badge-pill" style="color:#22c55e;">Cash on Delivery</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       ধাপ ৭: SLIDE-IN CART DRAWER (Dazzle Style)
+       ===================================================================== -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">
+        <i class="fa-solid fa-bag-shopping" style="color:var(--rj-gold);"></i>
+        <span class="i18n" data-en="Shopping Cart" data-bn="আমার শপিং কার্ট">আমার শপিং কার্ট</span>
+        <span style="font-size:0.85rem; color:#888;">(<span id="cartDrawerCount">0</span>)</span>
+      </h3>
+      <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close Cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Items List Body -->
+    <div class="cart-items-body" id="cartItemsList">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="cart-drawer-footer" id="cartDrawerFooter">
+      <div class="cart-summary-line">
+        <span class="i18n" data-en="Subtotal:" data-bn="সাবটোটাল:">সাবটোটাল:</span>
+        <span id="cartDrawerSubtotal" style="font-weight:700; color:#fff;">৳ 0</span>
+      </div>
+      <div class="cart-summary-line">
+        <span class="i18n" data-en="Delivery Charge:" data-bn="ডেলিভারি চার্জ:">ডেলিভারি চার্জ:</span>
+        <span id="cartDrawerDelivery" style="font-weight:700; color:#fff;">৳ 70</span>
+      </div>
+      <div class="cart-total-line">
+        <span class="i18n" data-en="Total Amount:" data-bn="সর্বমোট মূল্য:">সর্বমোট মূল্য:</span>
+        <span class="cart-total-val" id="cartDrawerTotal">৳ 0</span>
+      </div>
+      <button class="btn-proceed-checkout" id="openCheckoutModalBtn">
+        <i class="fa-solid fa-credit-card"></i>
+        <span class="i18n" data-en="Proceed to Checkout" data-bn="চেকআউটে এগিয়ে যান">চেকআউটে এগিয়ে যান</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       ধাপ ৭: CHECKOUT MODAL (bKash, Nagad, COD & Delivery Details)
+       ===================================================================== -->
+  <div class="checkout-modal-overlay" id="checkoutModalOverlay">
+    <div class="checkout-modal-card">
+      <button class="modal-close-btn" id="checkoutCloseBtn" aria-label="Close Checkout">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <!-- Checkout Form Content -->
+      <div id="checkoutFormContent">
+        <div class="checkout-header">
+          <h3>
+            <i class="fa-solid fa-truck-fast" style="color:var(--rj-gold);"></i>
+            <span class="i18n" data-en="Express Checkout" data-bn="দ্রুত চেকআউট ও অর্ডার কনফার্মেশন">দ্রুত চেকআউট ও অর্ডার কনফার্মেশন</span>
+          </h3>
+          <p style="font-size:0.8rem; color:#888; margin-top:4px;" class="i18n" 
+             data-en="Enter your details to complete your order with Cash on Delivery or Mobile Banking."
+             data-bn="ক্যাশ অন ডেলিভারি বা মোবাইল ব্যাংকিংয়ে সহজে অর্ডার সম্পন্ন করুন।">
+            ক্যাশ অন ডেলিভারি বা মোবাইল ব্যাংকিংয়ে সহজে অর্ডার সম্পন্ন করুন।
+          </p>
+        </div>
+
+        <form id="checkoutForm">
+          <div class="checkout-form-grid">
+            
+            <div class="form-full">
+              <label class="calc-label i18n" data-en="Your Full Name *" data-bn="আপনার পুরো নাম *">আপনার পুরো নাম *</label>
+              <input type="text" class="checkout-input" id="custName" required placeholder="যেমন: মো: তানভীর আহমেদ">
+            </div>
+
+            <div>
+              <label class="calc-label i18n" data-en="Mobile Number *" data-bn="মোবাইল নম্বর *">মোবাইল নম্বর *</label>
+              <input type="tel" class="checkout-input" id="custPhone" required placeholder="017XXXXXXXX">
+            </div>
+
+            <div>
+              <label class="calc-label i18n" data-en="Delivery Area *" data-bn="ডেলিভারি এরিয়া *">ডেলিভারি এরিয়া *</label>
+              <select class="checkout-input" id="custArea">
+                <option value="dhaka">ঢাকার ভেতরে (৳ ৭০)</option>
+                <option value="outside">ঢাকার বাইরে (৳ ১৩০)</option>
+              </select>
+            </div>
+
+            <div class="form-full">
+              <label class="calc-label i18n" data-en="Delivery Address *" data-bn="সম্পূর্ণ ডেলিভারি ঠিকানা *">সম্পূর্ণ ডেলিভারি ঠিকানা *</label>
+              <textarea class="checkout-input" id="custAddress" rows="2" required placeholder="বাড়ি/ফ্ল্যাট নং, রোড নং, এলাকা, থানা ও জেলা..."></textarea>
+            </div>
+
+          </div>
+
+          <!-- Payment Methods -->
+          <label class="calc-label i18n" data-en="Select Payment Method" data-bn="পেমেন্ট মাধ্যম নির্বাচন করুন">পেমেন্ট মাধ্যম নির্বাচন করুন</label>
+          <div class="payment-methods-grid">
+            
+            <div class="payment-card active" data-method="cod">
+              <div class="payment-card-icon">💵</div>
+              <div class="payment-card-name i18n" data-en="Cash on Delivery" data-bn="ক্যাশ অন ডেলিভারি">ক্যাশ অন ডেলিভারি</div>
+              <div style="font-size:0.68rem; color:#888;">পণ্য পেয়ে মূল্য দিন</div>
+            </div>
+
+            <div class="payment-card" data-method="bkash">
+              <div class="payment-card-icon">📱</div>
+              <div class="payment-card-name">বিকাশ (bKash)</div>
+              <div style="font-size:0.68rem; color:#888;">01700-000000 (Merchant)</div>
+            </div>
+
+            <div class="payment-card" data-method="nagad">
+              <div class="payment-card-icon">💳</div>
+              <div class="payment-card-name">নগদ / কার্ড / EMI</div>
+              <div style="font-size:0.68rem; color:#888;">ইন্সট্যান্ট পেমেন্ট</div>
+            </div>
+
+          </div>
+
+          <!-- Total Summary -->
+          <div style="background:#111; border:1px solid var(--rj-border); border-radius:8px; padding:1rem; margin-bottom:1.25rem;">
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:#aaa; margin-bottom:4px;">
+              <span class="i18n" data-en="Subtotal:" data-bn="প্রোডাক্ট মূল্য:">প্রোডাক্ট মূল্য:</span>
+              <span id="coSubtotal" style="color:#fff; font-weight:700;">৳ 0</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.85rem; color:#aaa; margin-bottom:6px;">
+              <span class="i18n" data-en="Delivery Fee:" data-bn="ডেলিভারি চার্জ:">ডেলিভারি চার্জ:</span>
+              <span id="coDelivery" style="color:#fff; font-weight:700;">৳ 70</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:1.15rem; font-weight:800; border-top:1px dashed #333; padding-top:6px;">
+              <span class="i18n" data-en="Total Payable:" data-bn="সর্বমোট প্রদেয়:">সর্বমোট প্রদেয়:</span>
+              <span id="coTotal" style="color:var(--rj-gold-light);">৳ 0</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-proceed-checkout" style="width:100%; font-size:1rem; padding:0.9rem;">
+            <i class="fa-solid fa-lock"></i>
+            <span class="i18n" data-en="Confirm & Place Order" data-bn="অর্ডার নিশ্চিত করুন">অর্ডার নিশ্চিত করুন</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Receipt Screen -->
+      <div class="order-success-wrap" id="orderSuccessWrap">
+        <div class="order-success-icon">✓</div>
+        <h3 style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:6px;">
+          অর্ডার সফলভাবে সম্পন্ন হয়েছে!
+        </h3>
+        <p style="font-size:0.85rem; color:#bbb; margin-bottom:1.25rem;">
+          অর্ডার ট্র্যাকিং আইডি: <strong id="successOrderId" style="color:var(--rj-gold-light);">#RJ-00000</strong>
+        </p>
+        <div style="background:#111; border:1px solid #333; border-radius:10px; padding:1.25rem; text-align:left; font-size:0.85rem; color:#ccc; margin-bottom:1.5rem;" id="successReceiptDetails">
+          <!-- Injected via JS -->
+        </div>
+        <button class="gold-btn" id="successDoneBtn" style="padding:10px 24px; border-radius:99px;">
+          শপিং চালিয়ে যান
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MOBILE BOTTOM NAVIGATION (App-like feel)
+       ===================================================================== -->
+  <div class="mobile-bottom-nav">
+    <div class="mobile-nav-items">
+      <a href="index.html" class="mobile-nav-link active">
+        <i class="fa-solid fa-house"></i>
+        <span class="i18n" data-en="Home" data-bn="হোম">হোম</span>
+      </a>
+      <a href="#categories" class="mobile-nav-link">
+        <i class="fa-solid fa-border-all"></i>
+        <span class="i18n" data-en="Categories" data-bn="ক্যাটাগরি">ক্যাটাগরি</span>
+      </a>
+      <a href="#exchange" class="mobile-nav-link">
+        <i class="fa-solid fa-repeat"></i>
+        <span class="i18n" data-en="Exchange" data-bn="এক্সচেঞ্জ">এক্সচেঞ্জ</span>
+      </a>
+      <a href="#cart" class="mobile-nav-link" id="mobileCartBtn">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="badge-count" style="top: -2px; right: 18px;" id="mobileCartCount">0</span>
+        <span class="i18n" data-en="Cart" data-bn="কার্ট">কার্ট</span>
+      </a>
+      <a href="#account" class="mobile-nav-link">
+        <i class="fa-regular fa-user"></i>
+        <span class="i18n" data-en="Profile" data-bn="প্রোফাইল">প্রোফাইল</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>

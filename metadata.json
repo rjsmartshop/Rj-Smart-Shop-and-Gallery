@@ -1,0 +1,6 @@
+{
+  "name": "RJ Smart Shop & Gallery",
+  "description": "Premium Smartphones, Gadgets & Accessories store inspired by Dazzle Bangladesh, featuring Phone Exchange Trade-In, 0% EMI, and Official Warranties.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
